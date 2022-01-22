@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+.contenar {
+  background: var(--pale-blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contenar .desk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contenar .card {
+  background: var(--very-pale-blue);
+  width: 450px;
+  height: 650px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenar .card .image1 {
+  width: 450px;
+  height: 220px;
+}
+
+.contenar .card .image1 img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.contenar .card .order {
+  padding: 20px;
+  text-align: center;
+}
+
+.contenar .card .order h1 {
+  font-weight: 900;
+  font-size: 32px;
+  color: var(--dark-blue);
+}
+
+.contenar .card .order p {
+  font-weight: 500;
+  color: var(--desaturated-blue);
+  padding: 22px;
+  line-height: 1.5;
+}
+
+.contenar .card .plan {
+  width: 350px;
+  height: 90px;
+  background: var(--pale-blue);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenar .card .plan .image {
+  max-height: 100%;
+  padding: 20px;
+}
+
+.contenar .card .plan .text {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.contenar .card .plan .text h3 {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.contenar .card .plan .text p {
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+
+.contenar .card .plan .chang {
+  padding: 20px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenar .card .plan .chang a {
+  color: var(--bright-blue);
+}
+
+.contenar .card .plan .chang:hover a {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.contenar .card .sub {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contenar .card .sub .bsub {
+  width: 350px;
+  height: 50px;
+  background: var(--bright-blue);
+  border: none;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenar .card .sub .bsub:hover {
+  opacity: 0.7;
+}
+
+.contenar .card .sub .bsub a {
+  text-decoration: none;
+  color: var(--very-pale-blue);
+}
+
+.contenar .card .sub .csub {
+  border: none;
+  background: var(--very-pale-blue);
+  margin: 20px;
+}
+
+.contenar .card .sub .csub a {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+.contenar .card .sub .csub:hover a {
+  color: var(--dark-blue);
+}
+
+@media (max-width: 767px) {
+  .contenar .desk {
+    display: none;
+  }
+  .contenar .mob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .contenar .card {
+    width: 300px;
+    height: 550px;
+  }
+  .contenar .card .image1 {
+    width: 300px;
+    height: 146px;
+  }
+  .contenar .card .order h1 {
+    font-size: 22px;
+  }
+  .contenar .card .order p {
+    padding: 9px;
+  }
+  .contenar .card .plan {
+    width: 250px;
+    height: 80px;
+  }
+  .contenar .card .plan .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  .contenar .card .plan .text h3 {
+    font-size: 18px;
+  }
+  .contenar .card .plan .text p {
+    font-size: 14px;
+  }
+  .contenar .card .plan .chang {
+    padding: 0 7px 0 0;
+  }
+  .contenar .card .sub .bsub {
+    width: 250px;
+  }
+}
